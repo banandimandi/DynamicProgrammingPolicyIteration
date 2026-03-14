@@ -9,7 +9,7 @@ def main():
     env.reset() ## target_location only initialized in reset. is_terminal() fails if reset() is not called here
     learner = DPLearner(env)
 
-    V, policy = learner.value_iteration()
+    V, policy = learner.policy_iteration()
 
     for episode in range(1, 10):
         state, info = env.reset()
